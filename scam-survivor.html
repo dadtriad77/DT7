@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Scam Survivor - defensive cybersecurity awareness and Python typing practice. Made by Dallas Ward.">
+  <title>Scam Survivor | Made by Dallas Ward</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="scam-survivor.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <header class="topbar"><a class="back-main" href="index.html">← D.A.D TRIAD 77</a>
+    <a class="brand" href="#" data-screen="home">
+      <span class="shield">✓</span>
+      <span>
+        <strong>Scam Survivor</strong>
+        <small>Spot the Scam. Stay Safe.</small>
+      </span>
+    </a>
+    <div class="profile">
+      <span class="profile-icon">🛡️</span>
+      <div><small>D.A.D TRIAD 77 PROJECT</small><strong id="levelLabel">Level 1</strong></div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section id="home" class="screen active">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">DEFENSIVE CYBERSECURITY TRAINING</p>
+          <h1>Welcome, <span>Cyber Defender.</span></h1>
+          <p class="lead">Practice identifying realistic scams, then sharpen your keyboard skills by typing real Python code.</p>
+        </div>
+        <div class="stats">
+          <article><small>Best Score</small><strong id="bestScore">0</strong></article>
+          <article><small>Best CPM</small><strong id="bestCpm">0</strong></article>
+          <article><small>Scams Caught</small><strong id="scamsCaught">0</strong></article>
+        </div>
+      </div>
+
+      <div class="credit">Made by <strong>Dallas Ward</strong></div>
+
+      <div class="section-title">
+        <p class="eyebrow">CHOOSE YOUR TRAINING</p>
+        <h2>Train the instincts that keep you safer online.</h2>
+      </div>
+
+      <div class="mode-grid">
+        <article class="mode-card scam-card">
+          <div class="mode-icon">✉ 💬 !</div>
+          <p class="eyebrow">DEFENSIVE CYBERSECURITY</p>
+          <h3>Scam Survivor</h3>
+          <p>Review realistic emails, texts, calls, and websites. Some are safe, some are scams, and some should be verified first.</p>
+          <ul>
+            <li>Realistic message formats</li>
+            <li>Legitimate vs. scam decisions</li>
+            <li>Hints, link checks, and sender checks</li>
+            <li>Score and security tracking</li>
+          </ul>
+          <button class="primary" data-screen="scam">Play Scam Survivor →</button>
+        </article>
+
+        <article class="mode-card code-card">
+          <div class="terminal-mini">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <code>python3 defender.py</code>
+          </div>
+          <p class="eyebrow">PYTHON + SPEED & ACCURACY</p>
+          <h3>Python Code Typing</h3>
+          <p>Type Python code exactly as shown. Practice syntax, indentation, cybersecurity-themed logic, speed, and accuracy.</p>
+          <ul>
+            <li>Real Python snippets</li>
+            <li>Live characters-per-minute score</li>
+            <li>Accuracy and error tracking</li>
+            <li>Beginner to advanced challenges</li>
+          </ul>
+          <button class="primary cyan" data-screen="typing">Open Python Terminal →</button>
+        </article>
+      </div>
+
+      <div class="info-row">
+        <article>
+          <span>💡</span>
+          <div><h4>Security Tip</h4><p>Scammers create urgency to make you act fast. Pause, verify the source, and never share one-time codes.</p></div>
+        </article>
+        <article>
+          <span>🏆</span>
+          <div><h4>Current Goal</h4><p>Correctly identify 5 scam scenarios to unlock Level 2.</p></div>
+        </article>
+      </div>
+
+      <section class="library">
+        <p class="eyebrow">TRAINING LIBRARY</p>
+        <h2>How to Spot Common Scams</h2>
+        <p class="lead small">Use these rules during the game and in real life.</p>
+        <div class="library-grid">
+          <article><span>✉</span><h3>Email</h3><p>Check the full sender address, inspect links, and be suspicious of urgent password or payment requests.</p></article>
+          <article><span>💬</span><h3>Text Messages</h3><p>Do not use unexpected delivery or banking links. Open the official app or website yourself.</p></article>
+          <article><span>☎</span><h3>Phone Calls</h3><p>Caller ID can be spoofed. Hang up and call the organization using a trusted number.</p></article>
+          <article><span>🔐</span><h3>Security Codes</h3><p>Never give a caller a one-time passcode. Legitimate support teams should not ask for it.</p></article>
+          <article><span>🌐</span><h3>Websites</h3><p>A padlock only means the connection is encrypted. Verify the exact domain before entering information.</p></article>
+          <article><span>🔎</span><h3>When Unsure</h3><p>Choose “Verify First.” Use an official app, bookmark, bill, card, or organization website.</p></article>
+        </div>
+      </section>
+    </section>
+
+    <section id="scam" class="screen">
+      <button class="back" data-screen="home">← Game Menu</button>
+      <div class="game-head">
+        <div>
+          <p class="eyebrow">DEFENSIVE TRAINING</p>
+          <h2>Scam Survivor</h2>
+        </div>
+        <div class="game-stats">
+          <span>Scenario <b id="scenarioNum">1 / 12</b></span>
+          <span>Score <b id="score">0</b></span>
+          <span>Security <b id="security">100%</b></span>
+          <span>Lives <b id="lives">♥ ♥ ♥</b></span>
+        </div>
+      </div>
+
+      <div class="scenario-layout">
+        <article class="message-card">
+          <div class="message-type" id="messageType">Email</div>
+          <h3 id="scenarioQuestion">What is the safest decision?</h3>
+          <p class="muted">Review the details before choosing.</p>
+          <div id="scenarioContent" class="scenario-content"></div>
+          <div id="inspectResult" class="inspect-result"></div>
+        </article>
+
+        <aside class="decision-panel">
+          <button class="decision legitimate" data-answer="legitimate"><b>✓</b><span><strong>Legitimate</strong><small>This appears safe.</small></span></button>
+          <button class="decision scam" data-answer="scam"><b>!</b><span><strong>Scam</strong><small>This is a malicious attempt.</small></span></button>
+          <button class="decision verify" data-answer="verify"><b>?</b><span><strong>Verify First</strong><small>Use an official source.</small></span></button>
+
+          <div class="inspect-box">
+            <h4>Inspect</h4>
+            <button id="inspectSender">👤 Inspect sender <span>›</span></button>
+            <button id="inspectLink">🔗 Analyze link <span>›</span></button>
+            <button id="useHint">💡 Use hint <small>Costs 5 points</small><span>›</span></button>
+          </div>
+        </aside>
+      </div>
+      <div id="scenarioFeedback" class="feedback"></div>
+    </section>
+
+    <section id="typing" class="screen">
+      <button class="back" data-screen="home">← Game Menu</button>
+      <div class="game-head">
+        <div>
+          <p class="eyebrow">PYTHON TRAINING TERMINAL</p>
+          <h2>Python Code Typing</h2>
+        </div>
+        <div class="game-stats">
+          <span>Time <b id="timeLeft">60s</b></span>
+          <span>CPM <b id="cpm">0</b></span>
+          <span>Accuracy <b id="accuracy">100%</b></span>
+          <span>Errors <b id="errors">0</b></span>
+        </div>
+      </div>
+
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+          <strong>dallas@scam-survivor: ~/python-training</strong>
+          <span>python3</span>
+        </div>
+        <div class="terminal-body">
+          <div class="terminal-settings">
+            <label>Difficulty
+              <select id="difficulty">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+              </select>
+            </label>
+            <label>Time
+              <select id="duration">
+                <option value="30">30 seconds</option>
+                <option value="60" selected>60 seconds</option>
+                <option value="120">120 seconds</option>
+              </select>
+            </label>
+            <button id="newCode" class="terminal-btn">New Challenge</button>
+          </div>
+
+          <p class="terminal-prompt"><span>$</span> python3 awareness_training.py</p>
+          <pre id="codeDisplay" class="code-display"></pre>
+          <textarea id="codeInput" class="code-input" spellcheck="false" autocomplete="off" autocapitalize="off" placeholder="Type the Python code exactly as shown above..."></textarea>
+          <div class="terminal-actions">
+            <button id="restartTyping" class="terminal-btn primary-terminal">Restart</button>
+            <span id="typingStatus">Timer starts with your first key.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="typing-tips">
+        <article><b>01</b><h4>Match indentation</h4><p>Python uses indentation as part of its syntax.</p></article>
+        <article><b>02</b><h4>Accuracy first</h4><p>Clean code matters more than rushing.</p></article>
+        <article><b>03</b><h4>Read the logic</h4><p>The examples reinforce defensive security ideas.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <strong>Scam Survivor</strong>
+      <span>Defensive cybersecurity awareness + Python training</span>
+    </div>
+    <p><a class="footer-back" href="index.html">Back to D.A.D TRIAD 77</a> &nbsp;•&nbsp; Made by <strong>Dallas Ward</strong></p>
+  </footer>
+
+  <script src="scam-survivor.js"></script>
+</body>
+</html>
